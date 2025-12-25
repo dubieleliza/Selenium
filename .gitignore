@@ -1,39 +1,19 @@
-# ===============================
-# IntelliJ IDEA
-# ===============================
+# IntelliJ / IDE
 .idea/
 *.iml
-*.iws
-*.ipr
-out/
 
-# ===============================
 # Gradle
-# ===============================
 .gradle/
 **/build/
-!**/src/**/build/
-
-# Gradle Wrapper (opcjonalnie – jeśli nie chcesz go w repo)
+**/gradle/
 gradlew
 gradlew.bat
-gradle/
+*.gradle
+settings.gradle
 
-# ===============================
-# Selenium / Test artifacts
-# ===============================
-**/reports/
-**/test-output/
-**/*.log
+# Java
+out/
 
-# ===============================
 # OS
-# ===============================
 .DS_Store
 Thumbs.db
-
-# ===============================
-# Temporary / generated
-# ===============================
-*.tmp
-*.swp
