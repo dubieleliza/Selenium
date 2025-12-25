@@ -1,1 +1,5 @@
 rootProject.name = 'Find'
+include 'ElementsTab'
+include 'ElementsTab:src:test:CheckBox'
+include 'ElementsTab:TextBox'
+include 'ElementsTab:CheckBox'
