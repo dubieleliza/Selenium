@@ -9,32 +9,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class WebTableEdit {
+public class DynamicButton {
     public static void main(String[] args) {
-
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         WebDriver driver = new ChromeDriver(options);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-        driver.get("https://demoqa.com/webtables");
+        driver.get("https://demoqa.com/buttons");
 
-        WebElement editField = wait.until(
-                ExpectedConditions.elementToBeClickable(By.id("edit-record-1"))
-        );
-        editField.click();
+        WebElement dynamicButton = wait.until(
+                ExpectedConditions.elementToBeClickable(By.id("dNj5i")));
+        dynamicButton.click();
 
-        WebElement firstNameField = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))
-        );
-        firstNameField.clear();
-        firstNameField.sendKeys("Victoria");
-
-        WebElement submitButton = wait.until(
-                ExpectedConditions.elementToBeClickable(By.id("submit"))
-        );
-        submitButton.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         driver.quit();
     }
